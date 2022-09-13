@@ -1,0 +1,21 @@
+//Write a method indexOf that accepts a value as a parameter and returns the index in the list of the first occurrence of that value, 
+//or -1 if the value is not found in the list.
+//Assume that you are adding this method to the LinkedIntList class as defined below:
+//public class LinkedIntList {
+//    private ListNode front;   // null for an empty list
+//    ...
+//}
+
+public int indexOf(int value) {
+	ListNode cur = front;
+    int count = -1;
+    if (cur == null) return -1;
+    if (cur.data == value) return 0;
+    while (cur.next!= null) {
+        count++;
+        if (cur.data == value)
+            return count;
+        cur = cur.next;
+    }
+    return -1;
+}
