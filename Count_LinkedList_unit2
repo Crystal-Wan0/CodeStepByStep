@@ -1,0 +1,23 @@
+//Write a method count that accepts an element value as a parameter and returns the number of occurrences of that value in the list. 
+//For example, suppose a variable named list stores the following sequence of elements:
+//[one, two, three, two, four, two, five, two, two, six]
+//A call of list.count("two") should return 5 because there are five occurrences of that value in the list. 
+//If the list does not contain the value at all, return 0.
+//The example shown is a list of strings, but this is a generic linked list class that can store any type of objects. 
+//Assume that you are adding this method to the LinkedList<E> class as defined below:
+//public class LinkedList<E> {
+//    private ListNode front;   // null for an empty list
+//    ...
+//}
+
+public int count(E value) {
+	ListNode cur = front;
+    int count = 0;
+    if (cur == null) return 0;
+    while (cur != null) {
+        if (cur.data.equals(value))
+            count++;
+        cur = cur.next;
+    }
+    return count;
+}
