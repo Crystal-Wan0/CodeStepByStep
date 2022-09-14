@@ -30,3 +30,24 @@ public int deleteBack() {
     cur.next = null;
     return value;
 }
+
+public int deleteBack() {
+    int d = 0;
+//	if (front==null)
+//        return null;
+    ListNode cur = front;
+    if(front!=null && front.next == null){
+        d = front.data;
+        front = front.next;
+    }
+    while(cur.next != null) { //NullPointerException: Cannot read field "next" because "" is null
+        if(cur.next.next == null) {
+            d = cur.next.data;
+//            System.out.println(d);
+            cur.next = null;
+        }
+        cur=cur.next;
+//        System.out.println("cur" + cur.data);
+    }
+    return d;
+}
