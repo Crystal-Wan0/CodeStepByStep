@@ -1,0 +1,19 @@
+//Write the code necessary to convert the following sequence of ListNode objects:
+//
+//list -> [1] -> [2] /
+//Into this sequence of ListNode objects:
+//
+//list -> [1] -> [2] -> [3] /
+//Assume that you are using ListNode class as defined in lecture and section:
+//
+//public class ListNode {
+//    public int data;       // data stored in this node
+//    public ListNode next;  // a link to the next node in the list
+//
+//    public ListNode() { ... }
+//    public ListNode(int data) { ... }
+//    public ListNode(int data, ListNode next) { ... }
+//}
+
+    ListNode l = new ListNode(3, null);
+    list.next.next = l;
