@@ -1,0 +1,11 @@
+//Write the code necessary to convert the following sequences of ListNode objects:
+//
+//list -> [1] -> [2] /
+//temp -> [3] /
+//Into this sequence of ListNode objects:
+//
+//list -> [1] -> [3] -> [2] /
+//(It does not matter what temp refers to at the end of your code.)
+
+    temp.next = list.next;
+    list.next = temp;
