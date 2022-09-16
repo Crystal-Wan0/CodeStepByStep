@@ -1,0 +1,36 @@
+//Write a method deleteBack that deletes the last value (the value at the back of the list) and returns the deleted value. If the list is empty, your method should throw a NoSuchElementException.
+//
+//Assume that you are adding this method to the LinkedIntList class as defined below:
+//
+//public class LinkedIntList {
+//    private ListNode front;   // null for an empty list
+//    ...
+//}
+
+public int deleteBack() {
+    int d = 0;
+
+    if (front == null)
+        throw new NoSuchElementException ("The list is null");
+
+
+        ListNode cur = front;
+        if(front.next == null){
+            d = front.data;
+            front = front.next;
+        }
+        else {
+            while(cur.next != null) { //NullPointerException: Cannot read field "next" because "" is null
+                if(cur.next.next == null) {
+                    d = cur.next.data;
+        //            System.out.println(d);
+                    cur.next = null;
+                }
+                else
+                    cur=cur.next;
+        //        System.out.println("cur" + cur.data);
+            }
+        }
+
+    return d;
+}
