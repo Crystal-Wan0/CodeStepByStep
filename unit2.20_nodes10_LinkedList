@@ -16,12 +16,10 @@
 //    public ListNode(int data, ListNode next) { ... }
 //}
 
-//ListNode list2 = new ListNode (list.data, list.next.next);
-//list = list.next;
-//list.next = null;
-// must no create new node objects
+ListNode m = list.next;
+ListNode list2 = list;
 
-list2 = list;
 list2.next = list.next.next;
-list = list.next;
-list.next = null;
+
+m.next = null;
+list = m;
